@@ -1,9 +1,11 @@
 import { useRef } from "react";
-import { motion } from "motion/react";
-import { div } from "motion/react-client";
+import { motion, useScroll } from "motion/react";
 
 export default function Hero({ isVisible }: { isVisible: boolean }) {
     const videoRef = useRef<HTMLVideoElement>(null);
+    const scroll = useScroll();
+
+    console.log("scroll", scroll)
 
     const handleMouseEnter = () => {
         videoRef.current?.play();
@@ -41,7 +43,14 @@ export default function Hero({ isVisible }: { isVisible: boolean }) {
                     />
                 </div>
             </motion.div>
-            <div className="text-[25rem] uppercase font-bold tracking-[20px] flex text-white flex justify-center items-center mt-[-5rem]">mill3</div>
+            <motion.div 
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -50 }} 
+                transition={{ duration: 0.5, ease: "easeOut", delay: 1 }}
+                className="text-[25rem] uppercase font-bold tracking-[20px] flex text-white flex justify-center items-center mt-[-5rem]"
+            >
+                    mill3
+            </motion.div>
         </div>
     );
 }
