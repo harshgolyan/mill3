@@ -6,6 +6,8 @@ import Hero from "./components/hero";
 import CTA from "./components/cta";
 import Promotions from "./components/promotions";
 import Innovation from "./components/innovation";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 export default function App() {
     const [showHero, setShowHero] = useState<boolean>(false);
@@ -23,11 +25,6 @@ export default function App() {
         target: heroRef,
         offset: ["start start", "end start"],
     });
-
-    // const { scrollYProgress: ctaProgress } = useScroll({
-    //     target: ctaRef,
-    //     offset: ["start 90%", "end 10%"],
-    // });
 
     const { scrollYProgress: promoProgress } = useScroll({
         target: promoRef,
@@ -77,6 +74,8 @@ export default function App() {
 
             <div className="relative w-full">
                 <Innovation />
+                <Contact />
+                <Footer />
             </div>
         </div>
     );
