@@ -13,8 +13,8 @@ export default function CTA() {
     const rightY = useTransform(scrollYProgress, [0, 1], [100, -300]);
 
     return (
-        <div className="relative w-full h-auto flex justify-center overflow-hidden -z-10">
-            <div className="h-[200vh] w-full absolute top-0 left-0"></div>
+        <div className="relative w-full h-auto flex justify-center overflow-hidden -z-10 my-0">
+            <div className="h-[calc(200vh-100px)] w-full absolute top-0 left-0"></div>
             <div ref={ref} className="grid grid-cols-3 gap-4 w-full min-h-screen">
                 <motion.div 
                     style={{ y: leftY }} 
