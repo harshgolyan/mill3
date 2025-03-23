@@ -18,7 +18,7 @@ export default function Innovation() {
                         transition={{
                             duration: 1,
                             repeat: Infinity,
-                            repeatDelay: 1.5, // 1.5 seconds delay after each repeat
+                            repeatDelay: 1.5,
                             ease: easeInOut
                         }}
                         className="absolute top-[2.8rem] right-[13.5rem] bg-white min-h-[10.5rem] min-w-px mx-10">    

@@ -27,7 +27,7 @@ export default function Hero({ isVisible }: { isVisible: boolean }) {
                 <div 
                     onMouseEnter={handleMouseEnter} 
                     onMouseLeave={handleMouseLeave} 
-                    className="cursor-pointer bg-[#142a1f] p-10 mt-10"
+                    className="cursor-pointer bg-[#142a1f] p-10 mt-10 hover:scale-[1.1] transition duration-300"
                 >
                     <video 
                         ref={videoRef}
@@ -37,7 +37,7 @@ export default function Hero({ isVisible }: { isVisible: boolean }) {
                         
                     />
                 </div>
-                <div className="cursor-pointer bg-[#3b0017] p-10 py-24 mt-10">
+                <div className="cursor-pointer bg-[#3b0017] p-10 py-24 mt-10 hover:scale-[1.1] transition duration-300">
                     <img src="/cob.jpg"
                     className="h-[23rem] w-[40rem] "
                     />
